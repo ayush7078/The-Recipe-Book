@@ -55,7 +55,7 @@ const AddRecipe = () => {
       </Form.Item>
 
       <Form.Item style={{ textAlign: 'center', marginTop: 24 }}>
-        <Button type="primary" htmlType="submit" size="large" style={{ minWidth: 150 }}>
+        <Button type="primary" htmlType="submit" size="large" style={{ minWidth: 150, fontSize : "20px" }}>
           Add Recipe
         </Button>
       </Form.Item>
