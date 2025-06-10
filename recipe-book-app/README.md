@@ -66,8 +66,8 @@ npm install
 npm run dev
 
 The app will be available at http://localhost:5173/
-
-Project Structure
+```
+## Project Structure
 
 /src
   /components
@@ -87,7 +87,7 @@ Project Structure
   index.js
 
 
-Authentication
+## Authentication
 Login form validates username/password (admin/admin).
 
 Auth state saved in localStorage as isAuthenticated.
@@ -96,14 +96,14 @@ Protected routes redirect unauthenticated users to login.
 
 Logout clears authentication and redirects to login.
 
-Favorites Management
+## Favorites Management
 Favorites are managed via React Context.
 
 Users can toggle favorites by clicking star icons.
 
 Favorites persist in memory during session (can be extended to localStorage).
 
-Routing
+## Routing
 / - Home page (search and list recipes)
 
 /recipe/:recipeId - Recipe details page
