@@ -31,7 +31,7 @@ A React-based Recipe Book app featuring recipe search, detailed views, favorite 
 
 ## Demo
 
-https://the-recipe-book-theta.vercel.app/add-recipe
+[https://the-recipe-book-theta.vercel.app/add-recipe](https://the-recipe-book-theta.vercel.app/)
 ---
 
 ## Tech Stack
