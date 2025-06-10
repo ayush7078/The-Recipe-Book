@@ -7,13 +7,21 @@ import { useFavorites } from '../context/FavoritesContext';
 const { Title, Paragraph } = Typography;
 
 const RecipeDetail = () => {
+    // Get recipe ID from the URL
   const { recipeId } = useParams();
+
+    // Get the details of the recipe using the ID
   const { data, loading, error } = useFetch(
     `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`
   );
+
+    // Get the recipe object from the API response
   const meal = data?.meals?.[0];
+  
+    // Get favorite recipes and function to add/remove favorites
   const { favorites, toggleFavorite } = useFavorites();
 
+    // Show spinner while loading data
   if (loading)
     return (
       <div style={{ textAlign: 'center', marginTop: '100px' }}>
@@ -21,6 +29,7 @@ const RecipeDetail = () => {
       </div>
     );
 
+  // Show error message if something went wrong
   if (error)
     return (
       <Alert

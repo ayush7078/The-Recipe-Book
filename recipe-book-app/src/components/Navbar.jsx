@@ -4,8 +4,10 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { UserOutlined, LogoutOutlined } from '@ant-design/icons';
 
 const Navbar = () => {
+    // Get current URL path to highlight the active tab
   const location = useLocation();
 
+    // Decide which menu item should be selected based on the current path
   const getKeyFromPath = (path) => {
     if (path === '/') return 'home';
     if (path.startsWith('/add-recipe')) return 'add';
@@ -13,12 +15,15 @@ const Navbar = () => {
   };
 
   const selectedKey = getKeyFromPath(location.pathname);
+
+    // Handle logout: remove token from local storage and redirect to login page
 const handleLogout = () => {
   localStorage.removeItem('isAuthenticated');
   
   window.location.href = '/login';  // simple redirect to login
 };
 
+  // Dropdown menu content when avatar is clicked
   const profileMenu = (
     <Menu style={{marginRight : "15px"}}>
       <Menu.Item key="logout" icon={<LogoutOutlined />} onClick={handleLogout}>

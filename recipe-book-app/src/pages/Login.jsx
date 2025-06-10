@@ -5,13 +5,16 @@ import { Form, Input, Button, Card, Typography, message } from 'antd';
 const { Title } = Typography;
 
 const Login = () => {
+  // This state controls the loading spinner on the login button
   const [loading, setLoading] = useState(false);
+
+    // Used to navigate after successful login
   const navigate = useNavigate();
 
+    // Function runs when the form is submitted successfully
   const onFinish = ({ username, password }) => {
     setLoading(true);
 
-    // Simulate login logic
     setTimeout(() => {
       if (username === 'admin' && password === 'admin') {
         localStorage.setItem('isAuthenticated', 'true');

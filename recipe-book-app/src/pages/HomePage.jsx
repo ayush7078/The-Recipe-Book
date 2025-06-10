@@ -7,16 +7,23 @@ import { useFavorites } from '../context/FavoritesContext';
 
 const HomePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const query = searchParams.get('query') || 'a';
+  const query = searchParams.get('query') || '';
+    
+  // Store input value from search box
   const [input, setInput] = useState(query);
 
+    // get recipe data using the query
   const { data, loading, error } = useFetch(
     `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
   );
+
+    // Get list of favorite recipes and toggle function from context
   const { favorites, toggleFavorite } = useFavorites();
 
+  // When user click Search button
+
   const handleSearch = (value) => {
-    setSearchParams({ query: value });
+    setSearchParams({ query: value }); // Update the URL with new query
   };
 
   return (
@@ -71,6 +78,7 @@ const HomePage = () => {
                 />
               }
             >
+              {/* Link to detailed recipe page */}
               <Link to={`/recipe/${item.idMeal}`}>View Details</Link>
             </Card>
           </List.Item>

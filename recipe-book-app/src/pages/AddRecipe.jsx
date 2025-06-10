@@ -3,10 +3,12 @@ import { Form, Input, Button, message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
 const AddRecipe = () => {
+  // States to store input values
   const [title, setTitle] = useState('');
   const [instructions, setInstructions] = useState('');
   const navigate = useNavigate();
 
+    // When the form is submitted
   const handleSubmit = () => {
     const newRecipe = { title, instructions };
     console.log('New Recipe:', newRecipe);
