@@ -68,7 +68,7 @@ npm run dev
 The app will be available at http://localhost:5173/
 ```
 ## Project Structure
-
+```
 /src
   /components
     - Navbar.jsx
@@ -85,7 +85,7 @@ The app will be available at http://localhost:5173/
     - NotFound.jsx
   App.jsx
   index.js
-
+```
 
 ## Authentication
 Login form validates username/password (admin/admin).
