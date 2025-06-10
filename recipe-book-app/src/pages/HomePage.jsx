@@ -46,18 +46,19 @@ const HomePage = () => {
           <List.Item>
             <Card
               hoverable
+              
               title={
                 <span>
                   {item.strMeal}{' '}
                   {favorites.includes(item.idMeal) ? (
                     <StarFilled
-                      onClick={() => toggleFavorite(item.idMeal)}
-                      style={{ color: 'gold', cursor: 'pointer' }}
+                    //  onClick={() => toggleFavorite(item.idMeal)}
+                      style={{ color: 'gold' }}
                     />
                   ) : (
                     <StarOutlined
-                      onClick={() => toggleFavorite(item.idMeal)}
-                      style={{ cursor: 'pointer' }}
+                   //   onClick={() => toggleFavorite(item.idMeal)}
+                     // style={{  }}
                     />
                   )}
                 </span>
