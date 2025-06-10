@@ -16,7 +16,7 @@ const Login = () => {
       if (username === 'admin' && password === 'admin') {
         localStorage.setItem('isAuthenticated', 'true');
         message.success('Login successful!');
-        navigate('/');
+        navigate('/add-recipe');
       } else {
         message.error('Invalid credentials');
       }
